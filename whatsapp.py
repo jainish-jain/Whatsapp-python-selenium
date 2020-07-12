@@ -15,6 +15,10 @@ def whatsapp_message():
     #chrome_options.add_argument('--disable-gpu')
     #chrome_options.add_argument("window-size=1024x768")
     #chrome_options.add_argument("--no-sandbox")
+    
+    
+    #The Below line is set for linux , it does need to scan the qrcode again to signin 
+    #This line differ for different os
     chrome_options.add_argument("--user-data-dir=~/.config/google-chrome")
     
     chrome_options.add_argument("--profile-directory=Default")
