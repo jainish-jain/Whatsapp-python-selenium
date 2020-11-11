@@ -22,8 +22,9 @@ def whatsapp_message():
     chrome_options.add_argument("--user-data-dir=~/.config/google-chrome")
     
     chrome_options.add_argument("--profile-directory=Default")
-    wdriver= webdriver.Chrome('chromedriver',options=chrome_options)
+    wdriver= webdriver.Chrome('chromedriver.exe',options=chrome_options)
     wdriver.get("https://web.whatsapp.com/")
+    time.sleep(10)
     wait = WebDriverWait(wdriver, 600)
     #time.sleep(5)
     
@@ -49,7 +50,10 @@ def whatsapp_message():
     return "Completed"
 
 if __name__=="__main__":
-    p=whatsapp_message()
-    print(p)
-    global wdriver
-    wdriver.quit()
+    # p=whatsapp_message()
+    # print(p)
+    # global wdriver
+    # wdriver.quit()
+    chrome_options = webdriver.ChromeOptions()
+    wdriver= webdriver.Chrome('chromedriver',options=chrome_options)
+    wdriver.get("https://web.whatsapp.com/")
